@@ -19,3 +19,8 @@ sysarch=$(uname -m)
         https://github.com/pgaskin/kepubify/releases/download/${KEPUBIFY_RELEASE}/kepubify-linux-arm
 
 fi
+
+# Make kepubify executable
+[[ -f /usr/bin/kepubify ]] && \
+[[ ! -x /usr/bin/kepubify ]] && \
+	chmod +x /usr/bin/kepubify
